@@ -64,7 +64,7 @@ class HistorySearch extends History
 
         $query->addSelect('history.*');
         $query->with([
-            'customer',
+//            'customer', // Считаю join этой таблицы излишним, т.к. в выводе данных он не используется
             'user',
             'sms',
             'task',

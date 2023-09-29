@@ -51,7 +51,7 @@ ini_set('memory_limit', '2048M');
             }
         ]
     ],
-    'exportType' => $exportType,
+//    'exportType' => $exportType, // Тут тоже параметр отключен
     'batchSize' => 2000,
     'filename' => $filename
 ]);

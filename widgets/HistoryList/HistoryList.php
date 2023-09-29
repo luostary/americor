@@ -31,9 +31,10 @@ class HistoryList extends Widget
     private function getLinkExport()
     {
         $params = Yii::$app->getRequest()->getQueryParams();
-        $params = ArrayHelper::merge([
-            'exportType' => Export::FORMAT_CSV
-        ], $params);
+        /** Тут убрано слияние прараметра */
+//        $params = ArrayHelper::merge([
+//            'exportType' => Export::FORMAT_CSV
+//        ], $params);
         $params[0] = 'site/export';
 
         return Url::to($params);
