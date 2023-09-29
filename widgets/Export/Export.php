@@ -11,6 +11,16 @@ class Export extends ExportMenu
 
     public function init()
     {
+        if (!in_array($this->exportType, [
+            self::FORMAT_HTML,
+            self::FORMAT_CSV,
+            self::FORMAT_TEXT,
+            self::FORMAT_PDF,
+            self::FORMAT_EXCEL,
+            self::FORMAT_EXCEL_X,
+        ])) {
+            $this->exportType = self::FORMAT_CSV;
+        }
         if (empty($this->options['id'])) {
             $this->options['id'] = $this->getId();
         }
